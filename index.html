@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
 </head>
 <body>
     <h2>Simple Sentence Generator</h2>
     <input type="button" id="generateBtn" value="Generate Sentence">
     <p id="output"></p>
-    </body>
+
+        <script>
+        let words = ["i", "like", "to", "code"]
+const button = document.getElementById("generateBtn")
+
+function generateSentence() {
+    let sentence = ""
+    const element = document.getElementById("output")
+
+    for(let word of words) {
+        sentence = sentence + " " + word
+    }
+
+    element.innerHTML = sentence
+}
+button.addEventListener("click", generateSentence)
+    </script>
+</body>
 </html>
